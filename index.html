@@ -7,22 +7,27 @@
 <body>
 	<h5>Задание: <p>Привет. Вам нужно запросить у пользователя возраст. Добавить условие при котором возраст будет выводиться с правильным словом: "год", "года" или "лет". Т.е. "29 лет" или "4 года"</p></h5>
 	<script type="text/javascript">
-		var years = prompt('Сколько вам лет?', '');
-		alert(years)
-		console.log(typeof(years));
-		Number(years);
-		console.log(years);
+	// 	var years = prompt('Сколько вам лет?', '');
+	// 	alert(years)
+	// 	console.log(typeof(years));
+	// 	Number(years);
+	// 	console.log(years);
 
-		if ( years == 1 || years == 21 || years == 31 || years == 41) {
-			alert(years + ' год')
-		}
-		else if ( years > 4 && years < 21 || years > 24 && years < 31 || years > 45  ) 
-		{
- 			alert('Вам ' + years + ' лет');
- }
-		else {
-			alert(years + ' года')
-		}
+	// 	if ( years == 1 || years == 21 || years == 31 || years == 41) {
+	// 		alert(years + ' год')
+	// 	}
+	// 	else if ( years > 4 && years < 21 || years > 24 && years < 31 || years > 45  ) 
+	// 	{
+ // 			alert('Вам ' + years + ' лет');
+ // }
+	// 	else {
+	// 		alert(years + ' года')
+	// 	}
+
+
+
+
+
 		// else if (years == 5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,25,26,27,28,29,30) {
 		// 	alert(years + ' лет' )
 		// }
@@ -43,6 +48,23 @@
 			
 // 			alert('Вам ' + years + ' года');
 // 		}
+
+
+function agetostr(age) {
+	var txt ;
+	var count = age % 100;
+	count = count % 10
+	if (count == 1) {
+		txt = 'год';
+	} else if (count >=2 && count <= 4){
+		txt = 'года';
+	}
+	else{
+		txt = 'лет';
+	}
+	return age + ' ' + txt;
+}
+console.log(agetostr(155));
 	</script>
 </body>
 </html>
